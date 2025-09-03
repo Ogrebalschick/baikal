@@ -199,24 +199,24 @@ export default function ServicesSection() {
                     </div>
                     <div className="flex items-center text-gray-600 bg-gray-50 rounded-lg p-1.5">
                       <i className="ri-suitcase-line w-3 h-3 flex items-center justify-center mr-1.5 text-blue-500"></i>
-                      <span className="text-xs font-medium truncate">{vehicle.features}</span>
+                      <span className="text-xs font-medium">{vehicle.features}</span>
                     </div>
                   </div>
                   
-                  <p className="text-sm text-gray-600 mb-3 leading-relaxed line-clamp-2">
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
                     {vehicle.description}
                   </p>
 
                   <div className="mb-4">
                     <h4 className="text-xs font-semibold text-gray-900 mb-2 flex items-center">
                       <i className="ri-check-line w-3 h-3 flex items-center justify-center mr-1.5 text-green-500"></i>
-                      Включено:
+                      Включено в стоимость:
                     </h4>
-                    <div className="grid grid-cols-2 gap-1">  
-                      {vehicle.amenities.slice(0, 4).map((amenity, amenityIndex) => (
+                    <div className="grid grid-cols-1 gap-1">
+                      {vehicle.amenities.map((amenity, amenityIndex) => (
                         <div key={amenityIndex} className="flex items-center text-xs text-gray-600">
                           <i className="ri-check-line w-3 h-3 flex items-center justify-center mr-1 text-green-500 flex-shrink-0"></i>
-                          <span className="truncate">{amenity}</span>
+                          <span>{amenity}</span>
                         </div>
                       ))}
                     </div>
@@ -225,7 +225,7 @@ export default function ServicesSection() {
                   <div className="mb-4">
                     <h4 className="text-xs font-semibold text-gray-900 mb-2 flex items-center">
                       <i className="ri-camera-line w-3 h-3 flex items-center justify-center mr-1.5"></i>
-                      Салон:
+                      Салон автомобиля:
                     </h4>
                     <div className="grid grid-cols-3 gap-1.5">
                       {vehicle.interiorImages.map((image, imgIndex) => (
@@ -260,7 +260,7 @@ export default function ServicesSection() {
                   >
                     <span className="flex items-center justify-center">
                       <i className="ri-check-line w-4 h-4 flex items-center justify-center mr-2"></i>
-                      Выбрать
+                      Выбрать автомобиль
                     </span>
                   </button>
                 </div>

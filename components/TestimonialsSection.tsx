@@ -251,40 +251,6 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </div>
-
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-4 md:space-x-8 bg-white/60 backdrop-blur-sm rounded-2xl px-4 md:px-8 py-6 shadow-lg flex-wrap justify-center">
-            <div className="flex items-center">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-3 md:mr-4">
-                <i className="ri-star-fill text-white text-lg md:text-xl w-5 md:w-6 h-5 md:h-6 flex items-center justify-center"></i>
-              </div>
-              <div>
-                <div className="text-xl md:text-2xl font-bold text-gray-900">4.9/5</div>
-                <div className="text-xs md:text-sm text-gray-600">Средний рейтинг</div>
-              </div>
-            </div>
-            <div className="w-px h-10 md:h-12 bg-gray-200 hidden sm:block"></div>
-            <div className="flex items-center">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center mr-3 md:mr-4">
-                <i className="ri-user-heart-line text-white text-lg md:text-xl w-5 md:w-6 h-5 md:h-6 flex items-center justify-center"></i>
-              </div>
-              <div>
-                <div className="text-xl md:text-2xl font-bold text-gray-900">2000+</div>
-                <div className="text-xs md:text-sm text-gray-600">Довольных клиентов</div>
-              </div>
-            </div>
-            <div className="w-px h-10 md:h-12 bg-gray-200 hidden sm:block"></div>
-            <div className="flex items-center">
-              <div className="w-10 md:w-12 h-10 md:h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-3 md:mr-4">
-                <i className="ri-shield-check-line text-white text-lg md:text-xl w-5 md:w-6 h-5 md:h-6 flex items-center justify-center"></i>
-              </div>
-              <div>
-                <div className="text-xl md:text-2xl font-bold text-gray-900">100%</div>
-                <div className="text-xs md:text-sm text-gray-600">Гарантия качества</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

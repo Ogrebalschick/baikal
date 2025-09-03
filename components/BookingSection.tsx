@@ -66,33 +66,28 @@ export default function BookingSection() {
     setIsSubmitting(true);
     
     try {
-      const telegramMessage = `🚗 НОВАЯ ЗАЯВКА НА ТРАНСФЕР
+      const selectedVehicle = vehicles.find(v => v.id === formData.vehicle);
+      
+      const formDataToSend = new FormData();
+      formDataToSend.append('from', formData.from);
+      formDataToSend.append('to', formData.to);
+      formDataToSend.append('passengers', formData.passengers);
+      formDataToSend.append('date', formData.date);
+      formDataToSend.append('time', formData.time);
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('vehicle', selectedVehicle?.name || 'Не выбран');
+      formDataToSend.append('returnTrip', formData.returnTrip ? 'Да' : 'Нет');
+      if (formData.returnTrip) {
+        formDataToSend.append('returnDate', formData.returnDate);
+        formDataToSend.append('returnTime', formData.returnTime);
+      }
+      formDataToSend.append('comment', formData.comment);
+      formDataToSend.append('email', 'trufanov.aleksei1337@gmail.com');
 
-📍 Маршрут: ${formData.from} → ${formData.to}
-👥 Пассажиров: ${formData.passengers}
-🚙 Автомобиль: ${vehicles.find(v => v.id === formData.vehicle)?.name || 'Не выбран'}
-📅 Дата: ${formData.date}
-⏰ Время: ${formData.time}
-
-👤 Клиент: ${formData.name}
-📞 Телефон: ${formData.phone}
-
-${formData.returnTrip ? `🔄 Обратный трансфер:
-📅 ${formData.returnDate}
-⏰ ${formData.returnTime}` : ''}
-
-${formData.comment ? `💬 Комментарий: ${formData.comment}` : ''}`;
-
-      const telegramResponse = await fetch(`https://api.telegram.org/bot7077953725:AAGcHXlQVKtOuQZAGZ-gMKQWC7NsHSNxG3s/sendMessage`, {
+      const response = await fetch('https://readdy.ai/api/form/d2rtbkc2132hm7p4bvdg', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: '@lekidss',
-          text: telegramMessage,
-          parse_mode: 'HTML'
-        })
+        body: formDataToSend
       });
       
       setIsSubmitting(false);
@@ -160,7 +155,7 @@ ${formData.comment ? `💬 Комментарий: ${formData.comment}` : ''}`;
           </p>
         </div>
 
-        <form id="booking-form" onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20">
+        <form id="booking-form" data-readdy-form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20">
           
           {/* Выбор автомобиля */}
           <div className="mb-5 sm:mb-6">
