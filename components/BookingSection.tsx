@@ -24,7 +24,7 @@ export default function BookingSection() {
 
   const destinations = [
     'Остров Ольхон',
-    'Листвянка', 
+    'Листвянка',
     'Аршан',
     'Большое Голоустное',
     'Байкальск',
@@ -41,22 +41,22 @@ export default function BookingSection() {
   ];
 
   const vehicles = [
-    { 
-      id: 'tank500', 
-      name: 'TANK 500', 
-      capacity: 'до 4 мест', 
+    {
+      id: 'tank500',
+      name: 'TANK 500',
+      capacity: 'до 4 мест',
       badge: 'Премиум'
     },
-    { 
-      id: 'exeed', 
-      name: 'EXEED TXL', 
-      capacity: 'до 4 мест', 
+    {
+      id: 'exeed',
+      name: 'EXEED TXL',
+      capacity: 'до 4 мест',
       badge: 'Стандарт'
     },
-    { 
-      id: 'esquire', 
-      name: 'Toyota Esquire', 
-      capacity: 'до 6 мест', 
+    {
+      id: 'esquire',
+      name: 'Toyota Esquire',
+      capacity: 'до 6 мест',
       badge: 'Групповой'
     }
   ];
@@ -64,76 +64,69 @@ export default function BookingSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+  
     try {
       const selectedVehicle = vehicles.find(v => v.id === formData.vehicle);
-      
-      const formDataToSend = new FormData();
-      formDataToSend.append('from', formData.from);
-      formDataToSend.append('to', formData.to);
-      formDataToSend.append('passengers', formData.passengers);
-      formDataToSend.append('date', formData.date);
-      formDataToSend.append('time', formData.time);
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('vehicle', selectedVehicle?.name || 'Не выбран');
-      formDataToSend.append('returnTrip', formData.returnTrip ? 'Да' : 'Нет');
-      if (formData.returnTrip) {
-        formDataToSend.append('returnDate', formData.returnDate);
-        formDataToSend.append('returnTime', formData.returnTime);
-      }
-      formDataToSend.append('comment', formData.comment);
-      formDataToSend.append('email', 'trufanov.aleksei1337@gmail.com');
-
-      const response = await fetch('https://readdy.ai/api/form/d2rtbkc2132hm7p4bvdg', {
-        method: 'POST',
-        body: formDataToSend
+  
+      // ✨ Текст для телеграма
+      const message = `
+  🚖 Новая заявка на трансфер:
+  ------------------------------
+  📍 Откуда: ${formData.from}
+  📍 Куда: ${formData.to}
+  👥 Пассажиров: ${formData.passengers}
+  📅 Дата: ${formData.date}
+  ⏰ Время: ${formData.time}
+  🙍 Имя: ${formData.name}
+  📞 Телефон: ${formData.phone}
+  🚗 Авто: ${selectedVehicle?.name || 'Не выбран'} (${selectedVehicle?.badge || ''})
+  🔄 Обратный трансфер: ${formData.returnTrip ? 'Да' : 'Нет'}
+  ${formData.returnTrip ? `📅 Дата обратно: ${formData.returnDate}\n⏰ Время обратно: ${formData.returnTime}` : ''}
+  💬 Комментарий: ${formData.comment || '—'}
+      `;
+  
+      // ⚡️ Заменить на твои данные
+      const TELEGRAM_BOT_TOKEN = "8431554708:AAEjeUCOm0fDPu9gXJfUE3SxPq-Z7uun--g";
+      const CHAT_ID = "-4845910441";
+  
+      const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          // убираем parse_mode или можно поставить "HTML"
+        })
       });
       
-      setIsSubmitting(false);
+  
+      if (!response.ok) throw new Error("Ошибка Telegram API");
+  
       setShowSuccess(true);
-      
-      setTimeout(() => {
-        setShowSuccess(false);
-        setFormData({
-          from: 'Иркутск',
-          to: '',
-          passengers: '1',
-          date: '',
-          time: '',
-          name: '',
-          phone: '',
-          vehicle: '',
-          returnTrip: false,
-          returnDate: '',
-          returnTime: '',
-          comment: ''
-        });
-      }, 3000);
+      setTimeout(() => setShowSuccess(false), 3000);
+      setFormData({
+        from: 'Иркутск',
+        to: '',
+        passengers: '1',
+        date: '',
+        time: '',
+        name: '',
+        phone: '',
+        vehicle: '',
+        returnTrip: false,
+        returnDate: '',
+        returnTime: '',
+        comment: ''
+      });
+  
     } catch (error) {
-      console.error('Ошибка отправки:', error);
+      console.error("Ошибка отправки:", error);
+      alert("Ошибка при отправке заявки. Попробуйте позже.");
+    } finally {
       setIsSubmitting(false);
-      setShowSuccess(true);
-      
-      setTimeout(() => {
-        setShowSuccess(false);
-        setFormData({
-          from: 'Иркутск',
-          to: '',
-          passengers: '1',
-          date: '',
-          time: '',
-          name: '',
-          phone: '',
-          vehicle: '',
-          returnTrip: false,
-          returnDate: '',
-          returnTime: '',
-          comment: ''
-        });
-      }, 3000);
     }
   };
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const value = e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value;
@@ -156,7 +149,7 @@ export default function BookingSection() {
         </div>
 
         <form id="booking-form" data-readdy-form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-6 md:p-8 border border-white/20">
-          
+
           {/* Выбор автомобиля */}
           <div className="mb-5 sm:mb-6">
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 flex items-center">
@@ -175,11 +168,10 @@ export default function BookingSection() {
                     className="sr-only"
                     required
                   />
-                  <div className={`p-3 sm:p-4 rounded-lg border-2 transition-all duration-300 ${
-                    formData.vehicle === vehicle.id 
-                      ? 'border-blue-400 bg-blue-500/20' 
-                      : 'border-white/30 bg-white/5 hover:border-white/50'
-                  }`}>
+                  <div className={`p-3 sm:p-4 rounded-lg border-2 transition-all duration-300 ${formData.vehicle === vehicle.id
+                    ? 'border-blue-400 bg-blue-500/20'
+                    : 'border-white/30 bg-white/5 hover:border-white/50'
+                    }`}>
                     <div className="flex justify-between items-start mb-1 sm:mb-2">
                       <h4 className="font-bold text-xs sm:text-sm">{vehicle.name}</h4>
                       <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-xs bg-white/20">
@@ -205,7 +197,7 @@ export default function BookingSection() {
                 readOnly
               />
             </div>
-            
+
             <div>
               <label className="block text-xs sm:text-sm font-medium mb-2">Куда</label>
               <select
@@ -230,7 +222,7 @@ export default function BookingSection() {
                 onChange={handleChange}
                 className="w-full px-3 py-2.5 sm:py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 pr-8 text-sm sm:text-base"
               >
-                {[1,2,3,4,5,6].map(num => (
+                {[1, 2, 3, 4, 5, 6].map(num => (
                   <option key={num} value={num} className="text-gray-900 bg-white">{num}</option>
                 ))}
               </select>
@@ -364,7 +356,7 @@ export default function BookingSection() {
                 </>
               )}
             </button>
-            
+
             {showSuccess && (
               <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-green-500/20 border border-green-400/30 rounded-xl">
                 <p className="text-green-200 text-xs sm:text-sm">
