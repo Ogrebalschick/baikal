@@ -8,35 +8,35 @@ export default function HeroSection() {
   
   const images = [
     {
-      url: "https://readdy.ai/api/search-image?query=Stunning%20panoramic%20view%20of%20Lake%20Baikal%20in%20Siberia%20Russia%20with%20crystal%20clear%20turquoise%20waters%20pristine%20wilderness%20snow-capped%20mountains%20in%20background%20dramatic%20cloudy%20sky%20golden%20hour%20lighting%20serene%20natural%20landscape%20perfect%20for%20travel%20destination%20photography%20modern%20cinematic%20style&width=1920&height=1080&seq=hero-baikal-1&orientation=landscape",
+      url: "/images/1.jpg",
       alt: "Панорамный вид на озеро Байкал"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Beautiful%20winter%20Lake%20Baikal%20with%20frozen%20ice%20surface%20blue%20crystal%20formations%20snow%20covered%20pine%20trees%20on%20shore%20dramatic%20clouds%20and%20sunset%20colors%20magical%20winter%20wonderland%20scenery%20Siberian%20landscape%20cinematic%20photography%20style&width=1920&height=1080&seq=hero-baikal-2&orientation=landscape",
+      url: "/images/2.jpg",
       alt: "Зимний Байкал с ледяными образованиями"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Listvyanka%20village%20Lake%20Baikal%20sunset%20golden%20hour%20wooden%20houses%20traditional%20Russian%20architecture%20lakefront%20peaceful%20evening%20atmosphere%20beautiful%20mountain%20backdrop%20reflection%20in%20water%20scenic%20destination%20travel%20photography&width=1920&height=1080&seq=hero-listvyanka-new&orientation=landscape",
+      url: "/images/3.jpg",
       alt: "Поселок Листвянка на закате"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Irkutsk%20city%20center%20historic%20architecture%20wooden%20houses%20traditional%20Siberian%20buildings%20Angara%20river%20embankment%20sunset%20golden%20hour%20urban%20landscape%20beautiful%20old%20Russian%20city%20cultural%20heritage%20tourism%20photography&width=1920&height=1080&seq=hero-irkutsk-1&orientation=landscape",
+      url: "/images/4.jpg",
       alt: "Исторический центр Иркутска"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Sayan%20Mountains%20Irkutsk%20Oblast%20pristine%20alpine%20meadows%20snow-capped%20peaks%20crystal%20clear%20mountain%20lakes%20untouched%20wilderness%20dramatic%20landscape%20pine%20forests%20nature%20photography%20Siberian%20mountains%20breathtaking%20scenery&width=1920&height=1080&seq=hero-sayan-1&orientation=landscape",
+      url: "/images/5.jpg",
       alt: "Саянские горы"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Angara%20river%20Irkutsk%20Oblast%20flowing%20through%20taiga%20forest%20pristine%20wilderness%20rocky%20shores%20dense%20pine%20and%20birch%20forests%20dramatic%20cliffs%20beautiful%20Siberian%20river%20landscape%20nature%20photography%20serene%20water%20flow&width=1920&height=1080&seq=hero-angara-1&orientation=landscape",
+      url: "/images/6.jpg",
       alt: "Река Ангара в тайге"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Tunka%20valley%20Irkutsk%20Oblast%20surrounded%20by%20Sayan%20mountains%20vast%20green%20steppes%20traditional%20Buryat%20villages%20distant%20snow-capped%20peaks%20golden%20grasslands%20dramatic%20mountain%20backdrop%20Siberian%20landscape%20photography&width=1920&height=1080&seq=hero-tunka-1&orientation=landscape",
+      url: "/images/7.jpg",
       alt: "Тункинская долина"
     },
     {
-      url: "https://readdy.ai/api/search-image?query=Primorsky%20Range%20Irkutsk%20Oblast%20dense%20taiga%20forest%20endless%20pine%20and%20fir%20trees%20rolling%20hills%20mountain%20ridges%20pristine%20wilderness%20untouched%20nature%20dramatic%20Siberian%20landscape%20green%20forest%20canopy%20aerial%20view&width=1920&height=1080&seq=hero-primorsky-1&orientation=landscape",
+      url: "/images/8.jpg",
       alt: "Приморский хребет"
     }
   ];

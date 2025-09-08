@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Отличный сервис! Водитель приехал точно вовремя, автомобиль чистый и комфортный. Однозначно рекомендую!',
       destination: 'Ольхон',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20beautiful%20young%20woman%20Anna%20smiling%20friendly%20face%20modern%20business%20casual%20style%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=anna-avatar&orientation=squarish'
+      avatar: '/images/testimonials/1.jpg'
     },
     {
       name: 'Михаил Сидоров',
@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Ездили компанией из 6 человек на Аршан. Микроавтобус просторный, кондиционер работал отлично. Цена очень адекватная. Спасибо за комфортную поездку!',
       destination: 'Аршан',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20handsome%20middle-aged%20man%20Mikhail%20smiling%20confident%20face%20business%20casual%20style%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=mikhail-avatar&orientation=squarish'
+      avatar: '/images/testimonials/2.jpg'
     },
     {
       name: 'Елена Козлова',
@@ -27,7 +27,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Пользуюсь услугами уже третий раз. Всегда пунктуальны, вежливые водители, честные цены. Это единственная компания, которой я доверяю поездки на Байкал.',
       destination: 'Листвянка',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20elegant%20woman%20Elena%20kind%20smile%20sophisticated%20face%20business%20casual%20style%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=elena-avatar&orientation=squarish'
+      avatar: '/images/testimonials/3.jpg'
     },
     {
       name: 'Дмитрий Волков',
@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Заказывал VIP трансфер для деловой поездки. Автомобиль премиум-класса, подача точно вовремя. Сервис на высшем уровне!',
       destination: 'Байкальск',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20successful%20businessman%20Dmitry%20confident%20smile%20executive%20style%20suit%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=dmitry-avatar&orientation=squarish'
+      avatar: '/images/testimonials/4.jpg'
     },
     {
       name: 'Ольга Морозова',
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Семьей ездили в Большое Голоустное. Детям понравилась поездка, водитель очень терпеливый и аккуратный. Автомобиль оборудован детскими креслами.',
       destination: 'Большое Голоустное',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20caring%20mother%20Olga%20warm%20smile%20family-oriented%20face%20casual%20style%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=olga-avatar&orientation=squarish'
+      avatar: '/images/testimonials/5.jpg'
     },
     {
       name: 'Александр Попов',
@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
       rating: 5,
       text: 'Местный житель, но иногда нужен трансфер для гостей. БайкалТрансфер - моя первая рекомендация всем приезжающим. Надежно и качественно!',
       destination: 'Сахюрта',
-      avatar: 'https://readdy.ai/api/search-image?query=Professional%20portrait%20photo%20friendly%20local%20man%20Alexander%20genuine%20smile%20helpful%20face%20casual%20style%20clean%20background%20natural%20lighting%20realistic%20photography&width=80&height=80&seq=alexander-avatar&orientation=squarish'
+      avatar: '/images/testimonials/6.jpg'
     }
   ];
 

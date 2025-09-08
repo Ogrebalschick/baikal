@@ -17,11 +17,11 @@ export default function ServicesSection() {
       capacity: 'до 4 мест',
       features: 'Вместительный багажник, автокресло',
       description: 'Новый премиальный внедорожник 2023 года в золотом цвете с повышенным комфортом и проходимостью',
-      exteriorImage: 'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/343413c583e88da0478c6fc340a8168b.jfif',
+      exteriorImage: '/images/tank500/exteriorImage.jfif',
       interiorImages: [
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/b59f62bc20383dc7994f8cc1f8e0a5d0.jfif',
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/15874399ca2512caadec2b55a596b83e.jfif',
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/039b319a5143d2b9a579f9b0ecbfc84b.jfif'
+        '/images/tank500/interiorImages/1.jfif',
+        '/images/tank500/interiorImages/2.jfif',
+        '/images/tank500/interiorImages/3.jfif'
       ],
       priceNote: 'Премиум тариф',
       amenities: [
@@ -40,11 +40,11 @@ export default function ServicesSection() {
       capacity: 'до 4 мест',
       features: 'Вместительный багажник, автокресло',
       description: 'Комфортабельный кроссовер 2022 года в сером цвете с современным дизайном и технологиями',
-      exteriorImage: 'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/c82ef44e886a428332216c3954acb893.jfif',
+      exteriorImage: '/images/exeed_txl/exteriorImage.jfif',
       interiorImages: [
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/f5fe32bddbc09229a5c943726aa7a961.jfif',
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/5cdd876949e35688ef10351eec7b4e23.jfif',
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/1d0ce428d457a12098e592c519be509f.jfif'
+        '/images/exeed_txl/interiorImages/1.jfif',
+        '/images/exeed_txl/interiorImages/2.jfif',
+        '/images/exeed_txl/interiorImages/3.jfif'
       ],
       priceNote: 'Стандартный тариф',
       amenities: [
@@ -63,10 +63,10 @@ export default function ServicesSection() {
       capacity: 'до 6 мест',
       features: 'Просторный салон, автокресло',
       description: 'Надежный минивэн 2019 года для больших компаний с отличной репутацией качества Toyota',
-      exteriorImage: 'https://public.readdy.ai/ai/img_res/767d4ea3-404c-44ee-8b19-0d8ec92494f4.jpg',
+      exteriorImage: '/images/toyota_esquire/exteriorImage.jpg',
       interiorImages: [
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/18b3bdb11dc08306c20f440a9306207c.jfif',
-        'https://static.readdy.ai/image/28865717ac2bd0499aa0614980ae2fbc/98d286708fbd9e1a4831d23d8e72ede2.jfif'
+        '/images/toyota_esquire/interiorImages/1.jfif',
+        '/images/toyota_esquire/interiorImages/2.jfif'
       ],
       priceNote: 'Групповой тариф',
       amenities: [

@@ -9,7 +9,7 @@ export default function DestinationsSection() {
       distance: '280 км',
       time: '4 часа',
       price: '18 000₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Olkhon%20Island%20Lake%20Baikal%20Burkhan%20Cape%20Shamanka%20Rock%20dramatic%20cliffs%20crystal%20clear%20blue%20water%20sacred%20shaman%20place%20sunset%20golden%20hour%20realistic%20travel%20destination%20photo&width=400&height=300&seq=olkhon-real-photo&orientation=landscape'
+      image: '/images/destinations/1.jpg'
     },
     {
       name: 'Листвянка',
@@ -17,7 +17,7 @@ export default function DestinationsSection() {
       distance: '65 км',
       time: '1.5 часа',
       price: '4 000₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Listvyanka%20village%20Lake%20Baikal%20shore%20wooden%20houses%20tourist%20destination%20Baikal%20Museum%20mountain%20backdrop%20clear%20water%20realistic%20travel%20photo%20Siberian%20settlement&width=400&height=300&seq=listvyanka-real-photo&orientation=landscape'
+      image: '/images/destinations/2.jpg'
     },
     {
       name: 'Аршан',
@@ -25,7 +25,7 @@ export default function DestinationsSection() {
       distance: '200 км',
       time: '3 часа',
       price: '10 500₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Arshan%20resort%20Sayan%20mountains%20mineral%20springs%20spa%20wellness%20center%20pine%20forest%20mountain%20landscape%20natural%20healing%20waters%20realistic%20travel%20destination%20photo&width=400&height=300&seq=arshan-real-photo&orientation=landscape'
+      image: '/images/destinations/3.jpg'
     },
     {
       name: 'Большое Голоустное',
@@ -33,7 +33,7 @@ export default function DestinationsSection() {
       distance: '120 км',
       time: '2 часа',
       price: '6 000₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Bolshoye%20Goloustnoye%20historic%20Siberian%20village%20Lake%20Baikal%20sandy%20beach%20wooden%20traditional%20architecture%20lakefront%20clear%20water%20authentic%20Russian%20settlement&width=400&height=300&seq=goloustnoye-real-photo&orientation=landscape'
+      image: '/images/destinations/4.jpg'
     },
     {
       name: 'Байкальск',
@@ -41,7 +41,7 @@ export default function DestinationsSection() {
       distance: '150 км',
       time: '2.5 часа',
       price: '9 500₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Baikalsk%20city%20Sobolinaya%20mountain%20ski%20resort%20Lake%20Baikal%20winter%20sports%20mountain%20town%20realistic%20travel%20destination%20photo%20southern%20Baikal&width=400&height=300&seq=baikalsk-real-photo&orientation=landscape'
+      image: '/images/destinations/5.jpg'
     },
     {
       name: 'Сахюрта (МРС)',
@@ -49,7 +49,7 @@ export default function DestinationsSection() {
       distance: '350 км',
       time: '5 часов',
       price: '14 000₽',
-      image: 'https://readdy.ai/api/search-image?query=Real%20photography%20Sakhyurta%20MRS%20Lake%20Baikal%20eastern%20shore%20hot%20thermal%20springs%20untouched%20wilderness%20taiga%20forest%20pristine%20nature%20mountain%20landscape%20realistic%20travel%20photo&width=400&height=300&seq=sakhyurta-real-photo&orientation=landscape'
+      image: '/images/destinations/6.jpg'
     }
   ];
 
