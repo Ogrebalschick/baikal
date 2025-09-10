@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   other: {
     'yandex-verification': '98c231a3925142dc',
+    'google-site-verification': 'aBH6xchWzBsaQuZrCQhEsYgnf85mT8fxryJC3L93sEQ'
   },
 }
 
